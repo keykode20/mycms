@@ -12,10 +12,10 @@ public class TestController {
 
     @Autowired private UserRepository repository;
 
-    @RequestMapping(value = "/index")
+ /*   @RequestMapping(value = "/index")
     public String index(){
         return "index.html";
-    }
+    }*/
 
     @RequestMapping(value = "/add")
     public String add(){
