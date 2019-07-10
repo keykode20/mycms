@@ -19,6 +19,7 @@ public class StagingSiteController {
     @RequestMapping(value="/staging")
     public String staging(@RequestParam Integer id, Model model){
         Optional<Site> content = repository.findById(id);
+        model.addAttribute("siteName",content.get().getName());
         model.addAttribute("content",content.get().getPage());
         return "staging_site.html";
     }
