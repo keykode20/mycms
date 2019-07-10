@@ -18,6 +18,10 @@
         });
     });
 
+    $('.create-site-action-view').on('click',function(){
+        console.log('function called');
+        $('.container-fluid').load("blank_container");
+    });
 
  })();
 

@@ -12,6 +12,8 @@ public class Site {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer id;
 
+    private String name;
+
     private String page;
 
     public String getPage() {
@@ -28,5 +30,13 @@ public class Site {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

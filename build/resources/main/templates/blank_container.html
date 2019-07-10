@@ -1,0 +1,22 @@
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-4 text-gray-800">Create Site</h1>
+
+    <label>name: </label><input class="site-name" type="text" input="name" />
+    <button class="create-site-action">ok</button>
+</div>
+<script>
+    $('.create-site-action').on('click',function(){
+
+        var siteName = $('.site-name').val();
+        console.log('site name is : '+siteName);
+        $.ajax({
+            url: '/create/site',
+            data: {siteName},
+            success: function(data){
+                console.log(data);
+            }
+        });
+    });
+</script>
